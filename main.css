@@ -18,6 +18,38 @@ body
 
 }
 
+.btn
+{	
+	font-family: "Poiret One";
+	font-size: 200%;
+	height: 100px;
+	width: 100%;
+	position: relative;
+	right: 10px;
+}
+
+
+#button
+{
+	background: #16222A; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #16222A , #3A6073); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #16222A , #3A6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border: 1px solid #00c7ec;
+	color: #FFFFFF;
+	padding: 10px 28px;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: all 0.4s ease-in-out; /* Safari */
+    transition: all 0.4s ease-in-out;
+}
+
+#button:hover
+{
+	background: #FFFFFF;
+	color: #00c7ec;
+}
+
 
 .fa-heart 
 {
@@ -36,5 +68,7 @@ body
 	bottom: 0;
 	width: 100%;
 }
+
+
 
 
