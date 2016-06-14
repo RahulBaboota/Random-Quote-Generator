@@ -18,6 +18,17 @@ body
 
 }
 
+.quote-box
+{
+	font-family: "Poiret One";
+	font-size: 150%;
+	height: 200px;
+	width: 75%;
+	position: relative;
+	left: 13%;
+
+}
+
 .btn
 {	
 	font-family: "Poiret One";
@@ -25,7 +36,7 @@ body
 	height: 100px;
 	width: 100%;
 	position: relative;
-	right: 10px;
+	left: 35%;
 }
 
 
@@ -49,6 +60,7 @@ body
 	background: #FFFFFF;
 	color: #00c7ec;
 }
+
 
 
 .fa-heart 
