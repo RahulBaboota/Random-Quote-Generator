@@ -22,11 +22,20 @@ body
 {
 	font-family: "Poiret One";
 	font-size: 150%;
-	height: 200px;
+	height: 150px;
 	width: 75%;
 	position: relative;
 	left: 13%;
+}
 
+#author-box
+{
+	font-family: "Poiret One";
+	font-size: 150%;
+	position: relative;
+	height: 50px;
+	left:80%;
+	width: 25%;
 }
 
 .btn
