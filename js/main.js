@@ -5,36 +5,37 @@ var getQuote = function()
 	$.ajax(
 	{
 
-		url:'http://quotes.stormconsultancy.co.uk/random.json?callback?',
-		dataType: 'jsonp',
+		url:'http://quotes.stormconsultancy.co.uk/random.json',
+		dataType: 'json',
 		type: 'GET',
-		jsonp: 'jsonp',
 		xhrFields: 
 		{
-       		withCredentials: true,
+       		withCredentials: false,
     	},
 
 		//If the request is succesful!!
 		success: function(data)
 		{	
 			//console.log(data);
+
 			// Adding the quote in the quote box
-			$('#qt-box').html(data.quote);
+			$('#qt-box').html('"' + data.quote + '"');
 
 			// Adding the author name
 			if (data.author != '')
 			{
-				$('#author-box').html(data.author);
+				$('#author-box').html('-' + data.author);
 			}
 			else
 			{
-				$('#author-box').html('Unknown');
+				$('#author-box').html('-' + 'Unknown');
 			}
 		},
 
 		error: function()
 		{	
 			//console.log(data);
+
 			$('#qt-box').html("There was a problem with the API request");
 		}
 	});
