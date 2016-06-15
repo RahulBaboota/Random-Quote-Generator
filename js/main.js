@@ -19,16 +19,27 @@ var getQuote = function()
 			//console.log(data);
 
 			// Adding the quote in the quote box
-			$('#qt-box').html('"' + data.quote + '"');
+			$('#qt-box').fadeOut(750, function()
+			{
+				$('#qt-box').html('"' + data.quote + '"').fadeIn(750);
+			})
 
 			// Adding the author name
+
 			if (data.author != '')
 			{
-				$('#author-box').html('-' + data.author);
+				$('#author-box').fadeOut(750, function()
+				{
+					$('#author-box').html('-' + data.author).fadeIn(750);
+				})
 			}
 			else
-			{
-				$('#author-box').html('-' + 'Unknown');
+			{	
+				$('author-box').fadeOut(750, function()
+				{
+					$('#author-box').html('-' + 'Unknown');
+
+				})
 			}
 		},
 
@@ -47,5 +58,6 @@ $(document).ready(function()
 {
 	$('#button').on('click', function(){
 		getQuote();
+		// getQuote();
 	})
 });
