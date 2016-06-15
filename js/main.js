@@ -2,15 +2,22 @@
 
 var getQuote = function()
 {
-	$.ajax({
+	$.ajax(
+	{
 
-		url:'http://quotes.stormconsultancy.co.uk/random.json',
-		datatype: 'jsonp',
+		url:'http://quotes.stormconsultancy.co.uk/random.json?callback?',
+		dataType: 'jsonp',
 		type: 'GET',
+		jsonp: 'jsonp',
+		xhrFields: 
+		{
+       		withCredentials: true,
+    	},
 
 		//If the request is succesful!!
 		success: function(data)
 		{	
+			//console.log(data);
 			// Adding the quote in the quote box
 			$('#qt-box').html(data.quote);
 
@@ -26,7 +33,8 @@ var getQuote = function()
 		},
 
 		error: function()
-		{
+		{	
+			//console.log(data);
 			$('#qt-box').html("There was a problem with the API request");
 		}
 	});
