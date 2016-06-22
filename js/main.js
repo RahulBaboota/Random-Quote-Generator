@@ -5,7 +5,7 @@ var getQuote = function()
 	$.ajax(
 	{
 
-		url:'http://quotes.stormconsultancy.co.uk/random.json',
+		url:'https://crossorigin.me/http://quotes.stormconsultancy.co.uk/random.json',
 		dataType: 'json',
 		type: 'GET',
 		xhrFields: 
