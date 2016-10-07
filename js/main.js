@@ -35,7 +35,7 @@ var getQuote = function()
 			}
 			else
 			{	
-				$('author-box').fadeOut(750, function()
+				$('#author-box').fadeOut(750, function()
 				{
 					$('#author-box').html('-' + 'Unknown');
 
